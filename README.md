@@ -26,7 +26,7 @@
   - [Example World Bank Zanzibar Building Item 2](examples/multidataset/zanzibar/znz029.json)
 
 ## Schema
-  - [JSON Schema](json-schema/schema.json)
+- [JSON Schema](json-schema/schema.json)
 
 ## Item Properties
 
