@@ -1,4 +1,4 @@
-# Template Extension Specification
+# Label Extension Specification
 
 - **Title:** Label
 - **Identifier:** <https://stac-extensions.github.io/label/v1.0.0/schema.json>
@@ -6,8 +6,6 @@
 - **Scope:** Item, Collection
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal
 - **Owner**: @jisantuc
-
-This is the place to add a short introduction.
 
 - Examples:
   - Roads
