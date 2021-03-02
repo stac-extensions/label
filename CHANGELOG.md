@@ -5,11 +5,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.0.0] - 2021-03-02
 ### Changed
 - foobar
+
+### Fixed
+- Cleaned up lint and examples for 1.0.0
 
 ## 0.0.1 - 2021-03-02
 ### Added
 - Copied over assets / description from stac-spec
 
-[Unreleased]: https://github.com/stac-extensions/label/compare/v0.0.1...HEAD
+[Unreleased]: https://github.com/stac-extensions/label/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/stac-extensions/label/compare/v0.0.1...v1.0.0
