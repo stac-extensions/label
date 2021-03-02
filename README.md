@@ -9,26 +9,45 @@
 - [**Changelog**](./CHANGELOG.md)
 - **History**: [Prior to March 2, 2021](https://github.com/radiantearth/stac-spec/tree/3d19e978e8aec2fb9268dfd31abfe308c4656998/extensions/label)
 
-## Examples
+This extension is meant to support using labeled AOIs with Machine Learning models,
+particularly training data sets, but can be used in any application where labeled
+AOIs are needed.
 
-- Roads
-  - [Example Roads Item](examples/spacenet-roads/roads_item.json)
-  - [Example Roads Asset (labels)](examples/spacenet-roads/spacenetroads_AOI_3_Paris_img101.geojson)
-  - [Example Roads Source Imagery Item](examples/spacenet-roads/roads_source.json)
-  - [Example Roads Collection](examples/spacenet-roads/roads_collection.json)
+This document explains the fields of the STAC Label Extension to a STAC Item. It is
+used to describe labeled Areas of Interest (AOIs) that are used with earth
+observation imagery. These labels can take several forms, though all are expected
+to be contained with a GeoJSON FeatureCollection:
 
-- Buildings
-  - [Example Collection of Two Building Footprint Label Catalogs](examples/multidataset/catalog.json)
-  - [Example SpaceNet Buildings Collection](examples/multidataset/spacenet-buildings/collection.json)
-  - [Example SpaceNet Buildings (Vegas) Item](examples/multidataset/spacenet-buildings/AOI_2_Vegas_img2636.json)
-  - [Example SpaceNet Buildings (Paris) Item](examples/multidataset/spacenet-buildings/AOI_3_Paris_img1648.json)
-  - [Example SpaceNet Buildings (Shanghai) Item](examples/multidataset/spacenet-buildings/AOI_4_Shanghai_img3344.json)
-  - [Example World Bank Zanzibar Buildings Collection](examples/multidataset/zanzibar/collection.json)
-  - [Example World Bank Zanzibar Building Item 1](examples/multidataset/zanzibar/znz001.json)
-  - [Example World Bank Zanzibar Building Item 2](examples/multidataset/zanzibar/znz029.json)
+- Tile classification labels: A GeoJSON FeatureCollection with a single Feature. This feature's geometry
+  should match the bounds of the labeled image tile, and a Feature property should define the class (see below).
+- Tile regression labels: A GeoJSON FeatureCollection with a single Feature. This feature's geometry should
+  match the bounds of the labeled image tile, and a Feature property should define the regression value (see below).
+- Object detection labels: A GeoJSON FeatureCollection containing rectangular bounding boxes (as Polygon geometry
+  Features) defining the bounds of an object of interest (e.g. a car). A Feature property must define the class
+  of the object labeled. Additional Feature properties may be defined for additional metadata.
+- Segmentation labels: A GeoJSON FeatureCollection containing Polygon geometry Features that trace the boundaries
+  of objects of interest (e.g. buildings, vegetation, bodies of water), or raster-formatted pixel masks
+  defining pixel classes. (See raster label notes)
 
-## Schema
-- [JSON Schema](json-schema/schema.json)
+---
+
+- Examples
+  - Roads
+    - [Example Roads Item](examples/spacenet-roads/roads_item.json)
+    - [Example Roads Asset (labels)](examples/spacenet-roads/spacenetroads_AOI_3_Paris_img101.geojson)
+    - [Example Roads Source Imagery Item](examples/spacenet-roads/roads_source.json)
+    - [Example Roads Collection](examples/spacenet-roads/roads_collection.json)
+  - Buildings
+    - [Example Collection of Two Building Footprint Label Catalogs](examples/multidataset/catalog.json)
+    - [Example SpaceNet Buildings Collection](examples/multidataset/spacenet-buildings/collection.json)
+    - [Example SpaceNet Buildings (Vegas) Item](examples/multidataset/spacenet-buildings/AOI_2_Vegas_img2636.json)
+    - [Example SpaceNet Buildings (Paris) Item](examples/multidataset/spacenet-buildings/AOI_3_Paris_img1648.json)
+    - [Example SpaceNet Buildings (Shanghai) Item](examples/multidataset/spacenet-buildings/AOI_4_Shanghai_img3344.json)
+    - [Example World Bank Zanzibar Buildings Collection](examples/multidataset/zanzibar/collection.json)
+    - [Example World Bank Zanzibar Building Item 1](examples/multidataset/zanzibar/znz001.json)
+    - [Example World Bank Zanzibar Building Item 2](examples/multidataset/zanzibar/znz029.json)
+- Schema
+  - [JSON Schema](json-schema/schema.json)
 
 ## Item Properties
 
