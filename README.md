@@ -6,6 +6,8 @@
 - **Scope:** Item, Collection
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal
 - **Owner**: @jisantuc
+- [**Changelog**](./CHANGELOG.md)
+- **History**: [Prior to March 2, 2021](https://github.com/radiantearth/stac-spec/tree/3d19e978e8aec2fb9268dfd31abfe308c4656998/extensions/label)
 
 ## Examples
 
