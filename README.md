@@ -7,23 +7,25 @@
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal
 - **Owner**: @jisantuc
 
-- Examples:
-  - Roads
-    - [Example Roads Item](examples/spacenet-roads/roads_item.json)
-    - [Example Roads Asset (labels)](examples/spacenet-roads/spacenetroads_AOI_3_Paris_img101.geojson)
-    - [Example Roads Source Imagery Item](examples/spacenet-roads/roads_source.json)
-    - [Example Roads Collection](examples/spacenet-roads/roads_collection.json)
+## Examples
 
-  - Buildings
-    - [Example Collection of Two Building Footprint Label Catalogs](examples/multidataset/catalog.json)
-    - [Example SpaceNet Buildings Collection](examples/multidataset/spacenet-buildings/collection.json)
-    - [Example SpaceNet Buildings (Vegas) Item](examples/multidataset/spacenet-buildings/AOI_2_Vegas_img2636.json)
-    - [Example SpaceNet Buildings (Paris) Item](examples/multidataset/spacenet-buildings/AOI_3_Paris_img1648.json)
-    - [Example SpaceNet Buildings (Shanghai) Item](examples/multidataset/spacenet-buildings/AOI_4_Shanghai_img3344.json)
-    - [Example World Bank Zanzibar Buildings Collection](examples/multidataset/zanzibar/collection.json)
-    - [Example World Bank Zanzibar Building Item 1](examples/multidataset/zanzibar/znz001.json)
-    - [Example World Bank Zanzibar Building Item 2](examples/multidataset/zanzibar/znz029.json)
-- Schema
+- Roads
+  - [Example Roads Item](examples/spacenet-roads/roads_item.json)
+  - [Example Roads Asset (labels)](examples/spacenet-roads/spacenetroads_AOI_3_Paris_img101.geojson)
+  - [Example Roads Source Imagery Item](examples/spacenet-roads/roads_source.json)
+  - [Example Roads Collection](examples/spacenet-roads/roads_collection.json)
+
+- Buildings
+  - [Example Collection of Two Building Footprint Label Catalogs](examples/multidataset/catalog.json)
+  - [Example SpaceNet Buildings Collection](examples/multidataset/spacenet-buildings/collection.json)
+  - [Example SpaceNet Buildings (Vegas) Item](examples/multidataset/spacenet-buildings/AOI_2_Vegas_img2636.json)
+  - [Example SpaceNet Buildings (Paris) Item](examples/multidataset/spacenet-buildings/AOI_3_Paris_img1648.json)
+  - [Example SpaceNet Buildings (Shanghai) Item](examples/multidataset/spacenet-buildings/AOI_4_Shanghai_img3344.json)
+  - [Example World Bank Zanzibar Buildings Collection](examples/multidataset/zanzibar/collection.json)
+  - [Example World Bank Zanzibar Building Item 1](examples/multidataset/zanzibar/znz001.json)
+  - [Example World Bank Zanzibar Building Item 2](examples/multidataset/zanzibar/znz029.json)
+
+## Schema
   - [JSON Schema](json-schema/schema.json)
 
 ## Item Properties
