@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- assets should use role `labels` instead of an asset name of `labels`
+
 ## [1.0.2] - 2021-03-02
 ### Fixed
 - Updated schema self link

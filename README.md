@@ -128,12 +128,16 @@ to be contained with a GeoJSON FeatureCollection:
 
 ### Assets
 
-#### labels (required)
+One or more assets will contain references to the label data. These assets have these requirements:
 
-The Label Extension requires at least one asset that uses the key "labels".
-The asset will contain a link to the actual label data. The asset has these requirements:
-
-- is a GeoJSON FeatureCollection
+- if the `label:type` is "vector", the labels must be a GeoJSON FeatureCollection.
+- if the `label:type` is "raster", it is recommended to also have an asset of a GeoJSON FeatureCollection 
+  defining the extent.
+- Asset Roles should be used to indicate which assets are the labels. It is recommended that all Assets 
+  referencing labels have the role `labels`.  Other labels such as `labels-vector` (for vector labels), 
+  `labels-raster` (for raster labels), `labels-extent` (for the vector extent of raster labels), `labels-training`
+   (for ML training data), and `labels-testing` (for ML testing data) may also be added to further indicate what 
+   specific assets reference.
 - if `label:tasks` is tile_classification, object_detection, or segmentation,
   each feature should have one or more properties containing the label(s) for the
   class (one of `label:classes`). the name of the property can be anything
@@ -141,6 +145,11 @@ The asset will contain a link to the actual label data. The asset has these requ
 - if `label:tasks` is tile_regression, each feature should have one or more properties
   defining the value for regression. the name of the property can be anything
   (use "label" if making from scratch), but needs to be specified in the `Item` with the `label:properties` field.
+
+#### Asset names
+
+The Label Extension recommends assets be named with the keys "raster_labels" or "vector_labels". However, 
+this is just a recommendation, and the names are entirely at the discretion of the implementer.
 
 #### Raster Label Notes
 
