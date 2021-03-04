@@ -6,8 +6,7 @@
 - **Scope:** Item, Collection
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal
 - **Owner**: @jisantuc
-- [**Changelog**](./CHANGELOG.md)
-- **History**: [Prior to March 2, 2021](https://github.com/radiantearth/stac-spec/tree/3d19e978e8aec2fb9268dfd31abfe308c4656998/extensions/label)
+- **History**: [Prior to March 2, 2021](https://github.com/radiantearth/stac-spec/commits/v1.0.0-rc.1/extensions/label)
 
 This extension is meant to support using labeled AOIs with Machine Learning models,
 particularly training data sets, but can be used in any application where labeled
@@ -31,7 +30,7 @@ to be contained with a GeoJSON FeatureCollection:
 
 ---
 
-- Examples
+- Examples:
   - Roads
     - [Example Roads Item](examples/spacenet-roads/roads_item.json)
     - [Example Roads Asset (labels)](examples/spacenet-roads/spacenetroads_AOI_3_Paris_img101.geojson)
@@ -46,8 +45,8 @@ to be contained with a GeoJSON FeatureCollection:
     - [Example World Bank Zanzibar Buildings Collection](examples/multidataset/zanzibar/collection.json)
     - [Example World Bank Zanzibar Building Item 1](examples/multidataset/zanzibar/znz001.json)
     - [Example World Bank Zanzibar Building Item 2](examples/multidataset/zanzibar/znz029.json)
-- Schema
-  - [JSON Schema](json-schema/schema.json)
+- [JSON Schema](json-schema/schema.json)
+- [Changelog](./CHANGELOG.md)
 
 ## Item Properties
 
