@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.0.0] - 2021-03-8
+
 ### Changed
 - assets should use role `labels` instead of an asset name of `labels`
 - Clarified the role of geometries on items. [#875](https://github.com/radiantearth/stac-spec/pull/875)
@@ -14,4 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Cleaned up examples
 
+For earlier history see https://github.com/radiantearth/stac-spec/commits/v1.0.0-rc.1/extensions/label
+
 [Unreleased]: https://github.com/stac-extensions/label/compare/v1.0.0...HEAD
+[v1.0.0]: <https://github.com/stac-extensions/sar/tree/v1.0.0>
