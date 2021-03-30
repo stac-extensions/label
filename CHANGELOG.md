@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- `label:properties` as array needs at least one item
+- `name` in `label:classes` must be non-empty
+- `label:description` must be non-empty
+
 ### Deprecated
 
 ### Removed
@@ -25,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - assets should use role `labels` instead of an asset name of `labels`
 - Clarified the role of geometries on items. [#875](https://github.com/radiantearth/stac-spec/pull/875)
-- `label:description` now allows CommonMark for rich-text representation ([#950](https://github.com/radiantearth/stac-spec/issues/950))
+- `label:description` now allows CommonMark for rich-text representation ([#950](https://github.com/radiantearth/stac-spec/issues/950))
 
 ### Fixed
 
