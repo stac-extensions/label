@@ -1,8 +1,9 @@
 {
+  "stac_version": "1.0.0-rc.1",
+  "type": "Catalog",
   "id": "label_extension_demo",
   "title": "label extension demo",
   "description": "Sample ML training data labels in the STAC format",
-  "stac_version": "1.0.0-rc.1",
   "links": [
     {
       "rel": "root",

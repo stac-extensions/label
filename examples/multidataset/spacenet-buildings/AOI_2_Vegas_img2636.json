@@ -1,8 +1,8 @@
 {
   "stac_version": "1.0.0-rc.1",
   "stac_extensions": [
-    "label",
-    "version"
+    "https://stac-extensions.github.io/label/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.0.0/schema.json"
   ],
   "id": "AOI_2_Vegas_img2636",
   "type": "Feature",
@@ -39,8 +39,7 @@
     "labels": {
       "title": "AOI_2_Vegas_img2636_label",
       "href": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN2_buildings/train/AOI_2_Vegas/geojson_buildings/SN2_buildings_train_AOI_2_Vegas_geojson_buildings_img2636.geojson",
-      "type": "application/geo+json",
-      "license": "CC-BY-SA-4.0"
+      "type": "application/geo+json"
     },
     "raster": {
       "title": "AOI_2_Vegas_img2636_previewcog",
@@ -49,7 +48,8 @@
     }
   },
   "properties": {
-    "datetime": "2016-08-26T22:41:55.000000Z",
+    "datetime": "2016-08-26T22:41:55Z",
+    "license": "CC-BY-SA-4.0",
     "label:properties": [
       "OBJECTID_1"
     ],

@@ -1,8 +1,8 @@
 {
   "stac_version": "1.0.0-rc.1",
   "stac_extensions": [
-    "label",
-    "version"
+    "https://stac-extensions.github.io/label/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.0.0/schema.json"
   ],
   "id": "znz001",
   "type": "Feature",
@@ -39,8 +39,7 @@
     "labels": {
       "title": "znz001_label",
       "href": "https://www.dropbox.com/sh/ct3s1x2a846x3yl/AAARCAOqhcRdoU7ULOb9GJl9a/grid_001.geojson?dl=1",
-      "type": "application/geo+json",
-      "license": "CC-BY-4.0"
+      "type": "application/geo+json"
     },
     "raster": {
       "title": "znz001_previewcog",
@@ -55,6 +54,7 @@
   },
   "properties": {
     "datetime": "2019-04-23T00:00:00Z",
+    "license": "CC-BY-4.0",
     "label:properties": [
       "building",
       "condition"

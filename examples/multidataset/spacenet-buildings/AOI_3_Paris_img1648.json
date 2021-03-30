@@ -1,8 +1,8 @@
 {
   "stac_version": "1.0.0-rc.1",
   "stac_extensions": [
-    "label",
-    "version"
+    "https://stac-extensions.github.io/label/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.0.0/schema.json"
   ],
   "id": "AOI_3_Paris_img1648",
   "type": "Feature",
@@ -39,18 +39,17 @@
     "labels": {
       "title": "AOI_3_Paris_img1648_label",
       "href": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN2_buildings/train/AOI_3_Paris/geojson_buildings/SN2_buildings_train_AOI_3_Paris_geojson_buildings_img1648.geojson",
-      "type": "application/geo+json",
-      "license": "CC-BY-SA-4.0"
+      "type": "application/geo+json"
     },
     "raster": {
       "title": "AOI_3_Paris_img1648_previewcog",
       "href": "https://spacenet-dataset.s3.amazonaws.com/AOIs/AOI_3_Paris/PS-MS/AOI_3_Paris_PS-MS_COG.tif",
-      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
-      "license": "CC-BY-SA-4.0"
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized"
     }
   },
   "properties": {
-    "datetime": "2016-08-26T22:41:55.000000Z",
+    "datetime": "2016-08-26T22:41:55Z",
+    "license": "CC-BY-SA-4.0",
     "label:properties": [
       "OBJECTID_1"
     ],

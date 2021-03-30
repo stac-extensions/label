@@ -1,5 +1,9 @@
 {
   "stac_version": "1.0.0-rc.1",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/version/v1.0.0/schema.json"
+  ],
+  "type": "Collection",
   "id": "spacenet-buildings-collection",
   "title": "spacenet-buildings AoI",
   "description": "Collection of training labels for spacenet-buildings",
@@ -23,7 +27,7 @@
       ]
     }
   },
-  "collection version": "1.0",
+  "version": "1.0",
   "keywords": [
     "demo"
   ],
