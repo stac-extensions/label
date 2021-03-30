@@ -99,7 +99,9 @@
       "rel": "source",
       "href": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN2_buildings/train/AOI_4_Shanghai/PS-RGB/SN2_buildings_train_AOI_4_Shanghai_PS-RGB_img3344.tif",
       "title": "The source imagery these building labels were derived from",
-      "label:assets": "OBJECTID_1"
+      "label:assets": [
+        "OBJECTID_1"
+      ]
     }
   ]
 }

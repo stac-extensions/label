@@ -113,7 +113,9 @@
       "rel": "source",
       "href": "https://oin-hotosm.s3.amazonaws.com/5ae242fd0b093000130afd38/0/5ae242fd0b093000130afd39.tif",
       "title": "The source imagery these building labels were derived from",
-      "label:assets": "building"
+      "label:assets": [
+        "building"
+      ]
     }
   ]
 }

@@ -12,6 +12,7 @@
           "required": [
             "type",
             "properties",
+            "links",
             "assets"
           ],
           "properties": {
@@ -32,6 +33,12 @@
                   "$ref": "#/definitions/fields"
                 }
               ]
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/link_fields"
+              }
             },
             "assets": {
               "type": "object",
@@ -73,11 +80,7 @@
           }
         },
         {
-          "$comment": "Remove this and the following object if this is not an extension to a Collection.",
           "$ref": "#/definitions/stac_extensions"
-        },
-        {
-          "$ref": "#/definitions/fields"
         }
       ]
     }
@@ -96,6 +99,21 @@
           }
         }
       }
+    },
+    "link_fields": {
+      "type": "object",
+      "properties": {
+        "label:assets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "patternProperties": {
+        "^(?!label:)": {}
+      },
+      "additionalProperties": false
     },
     "fields": {
       "type": "object",
@@ -223,9 +241,7 @@
         }
       },
       "patternProperties": {
-        "^(?!label:)": {
-          "$comment": "Above, change `template` to the prefix of this extension"
-        }
+        "^(?!label:)": {}
       },
       "additionalProperties": false
     }

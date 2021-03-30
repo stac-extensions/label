@@ -99,7 +99,9 @@
       "rel": "source",
       "href": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN2_buildings/train/AOI_2_Vegas/PS-RGB/SN2_buildings_train_AOI_2_Vegas_PS-RGB_img2636.tif",
       "title": "The source imagery these building labels were derived from",
-      "label:assets": "OBJECTID_1"
+      "label:assets": [
+        "OBJECTID_1"
+      ]
     }
   ]
 }
