@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - `label:properties` as array needs at least one item
-- `name` in `label:classes` must be non-empty
+- `name` in `label:classes` must be non-empty or null
 - `label:description` must be non-empty
 
 ### Deprecated

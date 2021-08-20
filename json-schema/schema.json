@@ -145,8 +145,15 @@
             "properties": {
               "name": {
                 "title": "Name",
-                "type": "string",
-                "minLength": 1
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
               },
               "classes": {
                 "title": "Classes",
