@@ -254,15 +254,7 @@
             "items": {
               "properties": {
                 "name": {
-                  "oneOf": [
-                    {
-                      "type": "string",
-                      "minLength": 1
-                    },
-                    {
-                      "type": "null"
-                    }
-                  ]
+                  "type": "null"
                 }
               }
             }
@@ -275,9 +267,8 @@
             "items": {
               "properties": {
                 "name": {
-                    "type": "string",
-                    "minLength": 1
-                  }
+                  "type": "string",
+                  "minLength": 1
                 }
               }
             }
