@@ -144,16 +144,7 @@
             ],
             "properties": {
               "name": {
-                "title": "Name",
-                "oneOf": [
-                  {
-                    "type": "string",
-                    "minLength": 1
-                  },
-                  {
-                    "type": "null"
-                  }
-                ]
+                "title": "Name"
               },
               "classes": {
                 "title": "Classes",
@@ -243,6 +234,49 @@
                       "title": "Value",
                       "type": "number"
                     }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "if": {
+        "properties": {
+          "label:type": {
+            "const": "raster"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "label:classes": {
+            "items": {
+              "properties": {
+                "name": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "label:classes": {
+            "items": {
+              "properties": {
+                "name": {
+                    "type": "string",
+                    "minLength": 1
                   }
                 }
               }
