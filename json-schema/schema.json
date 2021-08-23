@@ -144,9 +144,7 @@
             ],
             "properties": {
               "name": {
-                "title": "Name",
-                "type": "string",
-                "minLength": 1
+                "title": "Name"
               },
               "classes": {
                 "title": "Classes",
@@ -237,6 +235,40 @@
                       "type": "number"
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      },
+      "if": {
+        "properties": {
+          "label:type": {
+            "const": "raster"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "label:classes": {
+            "items": {
+              "properties": {
+                "name": {
+                  "type": "null"
+                }
+              }
+            }
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "label:classes": {
+            "items": {
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 1
                 }
               }
             }
