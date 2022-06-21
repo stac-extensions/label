@@ -57,7 +57,7 @@ to be contained with a GeoJSON FeatureCollection:
 | label:properties  | \[string]\|null                  | **REQUIRED** These are the names of the property field(s) in each `Feature` of the label asset's `FeatureCollection` that contains the  classes (keywords from `label:classes` if the property defines classes). If labels are rasters, use `null` . |
 | label:classes     | \[[Class Object](#class-object)] | **REQUIRED** if using categorical data. A Class Object defining the list of possible class names for each `label:properties` . (e.g., tree, building, car, hippo) |
 | label:description | string                           | **REQUIRED** A description of the label, how it was created, and what it is recommended for |
-| label:types        | \[string]                        | **REQUIRED** An list of the types of labels present in this item. Either `vector`, `raster`, or both. |
+| label:types        | \[string]                        | **REQUIRED** An array of the types of labels present in this item. Either `vector`, `raster`, or both. |
 | label:tasks       | \[string]                        | Recommended to be a subset of 'regression', 'classification', 'detection', or 'segmentation', but may be an arbitrary value |
 | label:methods     | \[string]                        | Recommended to be a subset of 'automated' or 'manual', but may be an arbitrary value. |
 | label:overviews   | \[[Label Overview Object](#label-overview-object)] | An Object storing counts (for classification-type data) or summary statistics (for continuous numerical/regression data). |
