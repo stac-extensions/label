@@ -57,7 +57,7 @@ to be contained with a GeoJSON FeatureCollection:
 | label:properties  | \[string]\|null                  | **REQUIRED** These are the names of the property field(s) in each `Feature` of the label asset's `FeatureCollection` that contains the  classes (keywords from `label:classes` if the property defines classes). If labels are rasters, use `null` . |
 | label:classes     | \[[Class Object](#class-object)] | **REQUIRED** if using categorical data. A Class Object defining the list of possible class names for each `label:properties` . (e.g., tree, building, car, hippo) |
 | label:description | string                           | **REQUIRED** A description of the label, how it was created, and what it is recommended for |
-| label:type        | string                           | **REQUIRED** An ENUM of either `vector` label type or `raster` label type |
+| label:types        | \[string]                        | **REQUIRED** An list of the types of labels present in this item. Either `vector`, `raster`, or both. |
 | label:tasks       | \[string]                        | Recommended to be a subset of 'regression', 'classification', 'detection', or 'segmentation', but may be an arbitrary value |
 | label:methods     | \[string]                        | Recommended to be a subset of 'automated' or 'manual', but may be an arbitrary value. |
 | label:overviews   | \[[Label Overview Object](#label-overview-object)] | An Object storing counts (for classification-type data) or summary statistics (for continuous numerical/regression data). |
@@ -131,13 +131,13 @@ to be contained with a GeoJSON FeatureCollection:
 
 One or more assets will contain references to the label data. These assets have these requirements:
 
-- if the `label:type` is "vector", the labels must be a GeoJSON FeatureCollection.
-- if the `label:type` is "raster", it is recommended to also have an asset of a GeoJSON FeatureCollection 
+- if the `label:types` property contains "vector", the labels must be a GeoJSON FeatureCollection.
+- if the `label:types` property contains "raster", it is recommended to also have an asset of a GeoJSON FeatureCollection
   defining the extent.
-- Asset Roles should be used to indicate which assets are the labels. It is recommended that all Assets 
-  referencing labels have the role `labels`.  Other labels such as `labels-vector` (for vector labels), 
+- Asset Roles should be used to indicate which assets are the labels. It is recommended that all Assets
+  referencing labels have the role `labels`.  Other labels such as `labels-vector` (for vector labels),
   `labels-raster` (for raster labels), `labels-extent` (for the vector extent of raster labels), `labels-training`
-   (for ML training data), and `labels-testing` (for ML testing data) may also be added to further indicate what 
+   (for ML training data), and `labels-testing` (for ML testing data) may also be added to further indicate what
    specific assets reference.
 - if `label:tasks` is tile_classification, object_detection, or segmentation,
   each feature should have one or more properties containing the label(s) for the
@@ -149,7 +149,7 @@ One or more assets will contain references to the label data. These assets have 
 
 #### Asset names
 
-The Label Extension recommends assets be named with the keys "raster_labels" or "vector_labels". However, 
+The Label Extension recommends assets be named with the keys "raster_labels" or "vector_labels". However,
 this is just a recommendation, and the names are entirely at the discretion of the implementer.
 
 #### Raster Label Notes
@@ -160,6 +160,9 @@ where there is water and 0s where there is land - the following approach is reco
 The raster label file (e.g. a GeoTIFF) should be included as an asset under the item.
 Along with the image file, a GeoJSON `FeatureCollection` asset should be included.
 That `FeatureCollection` should contain a single `Feature` , ideally a polygon geometry defining the extent of the raster.
+
+The [classification](https://github.com/stac-extensions/classification) extension should be used to
+show the mapping of raster pixel values to human-readable class names.
 
 #### Rendered images (optional)
 
@@ -195,10 +198,10 @@ for running tests are copied here for convenience.
 
 ### Running tests
 
-The same checks that run as checks on PR's are part of the repository and can be run locally to verify that changes are valid. 
+The same checks that run as checks on PR's are part of the repository and can be run locally to verify that changes are valid.
 To run tests locally, you'll need `npm`, which is a standard part of any [node.js installation](https://nodejs.org/en/download/).
 
-First you'll need to install everything with npm once. Just navigate to the root of this repository and on 
+First you'll need to install everything with npm once. Just navigate to the root of this repository and on
 your command line run:
 ```bash
 npm install
