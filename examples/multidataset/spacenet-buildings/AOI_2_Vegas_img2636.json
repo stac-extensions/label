@@ -57,7 +57,9 @@
     "label:tasks": [
       "segmentation"
     ],
-    "label:type": "vector",
+    "label:types": [
+      "vector"
+    ],
     "label:methods": [
       "manual"
     ],

@@ -43,7 +43,9 @@
       "lane_number",
       "paved"
     ],
-    "label:type": "vector",
+    "label:types": [
+      "vector"
+    ],
     "label:description": "sample SpaceNet roads label",
     "label:classes": [
       {
