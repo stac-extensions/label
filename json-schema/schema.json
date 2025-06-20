@@ -26,7 +26,7 @@
                   "required": [
                     "label:properties",
                     "label:description",
-                    "label:type"
+                    "label:types"
                   ]
                 },
                 {
@@ -171,13 +171,16 @@
           "type": "string",
           "minLength": 1
         },
-        "label:type": {
+        "label:types": {
           "title": "Type",
-          "type": "string",
-          "enum": [
-            "raster",
-            "vector"
-          ]
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "raster",
+              "vector"
+            ]
+          }
         },
         "label:tasks": {
           "title": "Task",
@@ -243,7 +246,7 @@
       },
       "if": {
         "properties": {
-          "label:type": {
+          "label:types": {
             "const": "raster"
           }
         }
