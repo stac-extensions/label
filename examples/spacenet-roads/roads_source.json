@@ -1,6 +1,8 @@
 {
-  "stac_version": "1.0.0-rc.1",
-  "stac_extensions": [],
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
   "type": "Feature",
   "bbox": [
     2.23379639995,
@@ -31,30 +33,30 @@
       ]
     ]
   },
-  "id": "AOI_3_Paris_img101",
+  "id": "SN3_roads_train_AOI_3_Paris_PS-RGB_img101",
   "properties": {
-    "collection": "imagery",
-    "datetime": "2016-08-26T22:41:55.000000Z"
+    "datetime": "2016-02-29T00:00:00Z",
+    "proj:code": "EPSG:4326"
   },
   "assets": {
     "rgb": {
       "title": "RGB Pan Sharpened (primary)",
-      "href": "https://spacenet-dataset.s3.amazonaws.com/SpaceNet_Roads_Competition/Train/AOI_3_Paris_Roads_Train/RGB-PanSharpen/RGB-PanSharpen_AOI_3_Paris_img101.tif",
+      "href": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN3_roads/train/AOI_3_Paris/PS-RGB/SN3_roads_train_AOI_3_Paris_PS-RGB_img101.tif",
       "type": "image/tiff; application=geotiff"
     },
     "multi": {
       "title": "8 band multispectral",
-      "href": "https://spacenet-dataset.s3.amazonaws.com/SpaceNet_Roads_Competition/Train/AOI_3_Paris_Roads_Train/MUL/MUL_AOI_3_Paris_img101.tif",
+      "href": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN3_roads/train/AOI_3_Paris/MS/SN3_roads_train_AOI_3_Paris_MS_img101.tif",
       "type": "image/tiff; application=geotiff"
     },
     "multi-pan": {
       "title": "8 band pan-sharpened multispectral",
-      "href": "https://spacenet-dataset.s3.amazonaws.com/SpaceNet_Roads_Competition/Train/AOI_3_Paris_Roads_Train/MUL-PanSharpen/MUL-PanSharpen_AOI_3_Paris_img101.tif",
+      "href": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN3_roads/train/AOI_3_Paris/PS-MS/SN3_roads_train_AOI_3_Paris_PS-MS_img101.tif",
       "type": "image/tiff; application=geotiff"
     },
     "pan": {
       "title": "Single band panchromatic",
-      "href": "https://spacenet-dataset.s3.amazonaws.com/SpaceNet_Roads_Competition/Train/AOI_3_Paris_Roads_Train/PAN/PAN_AOI_3_Paris_img101.tif",
+      "href": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN3_roads/train/AOI_3_Paris/PAN/SN3_roads_train_AOI_3_Paris_PAN_img101.tif",
       "type": "image/tiff; application=geotiff"
     }
   },

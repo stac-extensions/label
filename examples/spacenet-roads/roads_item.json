@@ -1,10 +1,11 @@
 {
-  "stac_version": "1.0.0-rc.1",
+  "stac_version": "1.0.0",
   "stac_extensions": [
     "https://stac-extensions.github.io/label/v1.0.1/schema.json",
     "https://stac-extensions.github.io/version/v1.0.0/schema.json"
   ],
   "id": "AOI_3_Paris_img101",
+  "collection": "spacenet-roads-sample",
   "type": "Feature",
   "geometry": {
     "type": "Polygon",
