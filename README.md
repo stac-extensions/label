@@ -16,8 +16,8 @@ AOIs are needed.
 
 This document explains the fields of the STAC Label Extension to a STAC Item. It is
 used to describe labeled Areas of Interest (AOIs) that are used with earth
-observation imagery. These labels can take several forms, though all are expected
-to be contained with a GeoJSON FeatureCollection:
+observation imagery. These labels can take several forms, though the most commonly expected
+formats are GeoJSON Feature or FeatureCollection for vector labels, and GeoTIFF for raster labels
 
 - Tile classification labels: A GeoJSON FeatureCollection with a single Feature. This feature's geometry
   should match the bounds of the labeled image tile, and a Feature property should define the class (see below).
