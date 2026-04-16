@@ -1,7 +1,8 @@
 {
-  "stac_version": "1.0.0",
+  "stac_version": "1.1.0",
   "stac_extensions": [
-    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json"
   ],
   "type": "Feature",
   "bbox": [
@@ -42,7 +43,42 @@
     "rgb": {
       "title": "RGB Pan Sharpened (primary)",
       "href": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN3_roads/train/AOI_3_Paris/PS-RGB/SN3_roads_train_AOI_3_Paris_PS-RGB_img101.tif",
-      "type": "image/tiff; application=geotiff"
+      "type": "image/tiff; application=geotiff",
+      "roles": [
+        "overview"
+      ],
+      "bands": [
+        {
+          "name": "red",
+          "eo:common_name": "red",
+          "statistics": {
+            "minimum": 13,
+            "maximum": 1650,
+            "mean": 219.61644490644,
+            "stddev": 119.82769167493
+          }
+        },
+        {
+          "name": "green",
+          "eo:common_name": "green",
+          "statistics": {
+            "minimum": 125,
+            "maximum": 1429,
+            "mean": 298.16432432432,
+            "stddev": 93.226574778427
+          }
+        },
+        {
+          "name": "blue",
+          "eo:common_name": "blue",
+          "statistics": {
+            "minimum": 162,
+            "maximum": 931,
+            "mean": 267.35869022869,
+            "stddev": 53.576486704509
+          }
+        }
+      ]
     },
     "multi": {
       "title": "8 band multispectral",
