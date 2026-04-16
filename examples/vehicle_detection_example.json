@@ -1,0 +1,237 @@
+{
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/label/v1.0.1/schema.json"
+  ],
+  "id": "vehicle_detection_example_001",
+  "type": "Feature",
+  "bbox": [
+    -122.4194,
+    37.7749,
+    -122.4094,
+    37.7849
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -122.4194,
+          37.7749
+        ],
+        [
+          -122.4194,
+          37.7849
+        ],
+        [
+          -122.4094,
+          37.7849
+        ],
+        [
+          -122.4094,
+          37.7749
+        ],
+        [
+          -122.4194,
+          37.7749
+        ]
+      ]
+    ]
+  },
+  "assets": {
+    "labels": {
+      "title": "Vehicle Detection Labels",
+      "href": "vehicle_detection_labels.geojson",
+      "type": "application/geo+json",
+      "roles": [
+        "labels",
+        "labels-vector"
+      ]
+    },
+    "source_image": {
+      "title": "Source RGB Imagery",
+      "href": "aerial_image_001.tif",
+      "type": "image/tiff",
+      "roles": [
+        "data"
+      ]
+    }
+  },
+  "properties": {
+    "datetime": "2024-03-15T14:30:00Z",
+    "license": "CC-BY-4.0",
+    "label:properties": [
+      "vehicle_type",
+      "confidence",
+      "vehicle_make",
+      "vehicle_color",
+      "occlusion_level"
+    ],
+    "label:description": "Vehicle detection labels for aerial imagery containing cars, trucks, and buses with bounding boxes, including vehicle make, color, and occlusion metadata",
+    "label:tasks": [
+      "detection"
+    ],
+    "label:type": "vector",
+    "label:methods": [
+      "manual"
+    ],
+    "label:classes": [
+      {
+        "name": "vehicle_type",
+        "classes": [
+          "car",
+          "truck",
+          "bus",
+          "motorcycle"
+        ]
+      },
+      {
+        "name": "confidence",
+        "classes": [
+          "high",
+          "medium",
+          "low"
+        ]
+      },
+      {
+        "name": "vehicle_make",
+        "classes": [
+          "Toyota",
+          "Ford",
+          "BMW",
+          "Unknown"
+        ]
+      },
+      {
+        "name": "vehicle_color",
+        "classes": [
+          "white",
+          "black",
+          "red",
+          "other"
+        ]
+      },
+      {
+        "name": "occlusion_level",
+        "classes": [
+          "none",
+          "partial",
+          "heavy"
+        ]
+      }
+    ],
+    "label:overviews": [
+      {
+        "property_key": "vehicle_type",
+        "counts": [
+          {
+            "name": "car",
+            "count": 55
+          },
+          {
+            "name": "truck",
+            "count": 10
+          },
+          {
+            "name": "bus",
+            "count": 2
+          },
+          {
+            "name": "motorcycle",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "property_key": "confidence",
+        "counts": [
+          {
+            "name": "high",
+            "count": 58
+          },
+          {
+            "name": "medium",
+            "count": 8
+          },
+          {
+            "name": "low",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "property_key": "vehicle_make",
+        "counts": [
+          {
+            "name": "Toyota",
+            "count": 25
+          },
+          {
+            "name": "Ford",
+            "count": 18
+          },
+          {
+            "name": "BMW",
+            "count": 15
+          },
+          {
+            "name": "Unknown",
+            "count": 10
+          }
+        ]
+      },
+      {
+        "property_key": "vehicle_color",
+        "counts": [
+          {
+            "name": "white",
+            "count": 28
+          },
+          {
+            "name": "black",
+            "count": 22
+          },
+          {
+            "name": "red",
+            "count": 12
+          },
+          {
+            "name": "other",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "property_key": "occlusion_level",
+        "counts": [
+          {
+            "name": "none",
+            "count": 50
+          },
+          {
+            "name": "partial",
+            "count": 16
+          },
+          {
+            "name": "heavy",
+            "count": 2
+          }
+        ]
+      }
+    ]
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "./object_detection_example.json"
+    },
+    {
+      "rel": "source",
+      "href": "https://example.com/source/aerial_image_001.tif",
+      "title": "Source aerial imagery used for vehicle detection labeling",
+      "label:assets": [
+        "rgb"
+      ]
+    }
+  ]
+}
